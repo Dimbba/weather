@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 
+const api_key = "";
+
 class KUO extends React.Component {
     state = {
         city: null,
@@ -14,7 +16,7 @@ class KUO extends React.Component {
     }
 
     componentDidMount() {
-        axios.get('http://api.openweathermap.org/data/2.5/weather?id=650225&units=metric&APPID=83d1900854a88677294589db185f3ded')
+        axios.get(`http://api.openweathermap.org/data/2.5/weather?id=655195&units=metric&APPID=${api_key}`)
         .then(response => response.data)
         .then((data) => {
             this.setState({
