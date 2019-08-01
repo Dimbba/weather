@@ -8,13 +8,14 @@ class App extends React.Component {
     render() {
         return(
             <div>
-                <TRE />
-                <br />
-                <JKL />
-                <br />
-                <KUO />
-                <br />
-                <HKI />
+                <h2>Säätiedot</h2>
+                    <TRE />
+                    <br />
+                    <JKL />
+                    <br />
+                    <KUO />
+                    <br />
+                    <HKI />
             </div>
         );
     }

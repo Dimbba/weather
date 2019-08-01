@@ -3,18 +3,18 @@ import axios from 'axios';
 
 class KUO extends React.Component {
     state = {
-        city: undefined, //response.city.name,
-        country: undefined, //response.city.country,
-        temperature : undefined, //response.list[0].main.temp,
-        humidity: undefined, //response.list[0].main.humidity,
-        condition: undefined, //response.list[0].weather[0].description,
-        icon: undefined, //response.list[0].weather[0].icon,
-        wind: [undefined, undefined], //[response.list[0].wind.speed, response.list[0].wind.deg],
-        error: undefined,
+        city: null,
+        country: null,
+        temperature : null,
+        humidity: null,
+        condition: null,
+        icon: null,
+        wind: [null, null],
+        error: null,
     }
 
     componentDidMount() {
-        axios.get('http://api.openweathermap.org/data/2.5/weather?id=650225&APPID=83d1900854a88677294589db185f3ded')
+        axios.get('http://api.openweathermap.org/data/2.5/weather?id=650225&units=metric&APPID=83d1900854a88677294589db185f3ded')
         .then(response => response.data)
         .then((data) => {
             this.setState({
@@ -22,7 +22,7 @@ class KUO extends React.Component {
                 temperature: data.main.temp,
                 humidity: data.main.humidity,
                 condition: data.weather[0].description,
-                icon: data.weather.icon,
+                icon: data.weather[0].icon,
                 wind: [data.wind.speed, data.wind.deg]
             })
             console.log(data);
@@ -35,15 +35,12 @@ class KUO extends React.Component {
     render() {
         return(
             <div>
-                <h2>Säätiedot</h2>
-                <div>
-                    <h3> Kaupunki: {this.state.city} </h3>
-                    <p> Lämpötila: {this.state.temperature} K</p>
-                    <p> Ilmankosteus: {this.state.humidity} </p>
-                    <p> Kuvaus: {this.state.condition} </p>
-                    <i> Ikoni: {this.state.icon} </i>
-                    <p> Tuuli: {this.state.wind} </p>
-                </div>
+                <h3> Kaupunki: {this.state.city} </h3>
+                <p> Lämpötila: {this.state.temperature} astetta</p>
+                <p> Ilmankosteus: {this.state.humidity} %</p>
+                <p> Kuvaus: {this.state.condition} </p>
+                <img src={`http://openweathermap.org/img/wn/${this.state.icon}@2x.png`} alt="Not Found" />
+                <p> Tuuli: {this.state.wind[0]} m/s, suunta {this.state.wind[1]} </p>
             </div>
         );
     }
