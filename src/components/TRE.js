@@ -17,7 +17,7 @@ class TRE extends React.Component {
     
 
     componentDidMount() {
-        axios.get(`http://api.openweathermap.org/data/2.5/weather?id=655195&units=metric&APPID=${api_key}`)
+        axios.get(`http://api.openweathermap.org/data/2.5/weather?id=634964&units=metric&APPID=${api_key}`)
         .then(response => response.data)
         .then((data) => {
             this.setState({
