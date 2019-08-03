@@ -22,6 +22,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Features not implemented
 
-*No dropdown menu.
-*Not a forecast, instead displays current weather in all cities.
-*MaterialUI styling attempted. Basic inline styling implemented instead.
+* No dropdown menu.
+* Not a forecast, instead displays current weather in all cities.
+* MaterialUI styling attempted. Basic inline styling implemented instead.
