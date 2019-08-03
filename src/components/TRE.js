@@ -37,13 +37,16 @@ class TRE extends React.Component {
 
     render() {
         return(
-            <div>
-                <h3> Kaupunki: {this.state.city} </h3>
-                <p> Lämpötila: {this.state.temperature} astetta</p>
-                <p> Ilmankosteus: {this.state.humidity} %</p>
-                <p> Kuvaus: {this.state.condition} </p>
-                <img src={`http://openweathermap.org/img/wn/${this.state.icon}@2x.png`} alt="Not Found" />
-                <p> Tuuli: {this.state.wind[0]} m/s, suunta {this.state.wind[1]} </p>
+            <div style={{backgroundColor: "#FFFFFF", borderRadius: "3px", borderStyle: "solid", borderWidth: '2px', borderColor: '#E6E6E6'}}>
+                <header style={{backgroundColor: '#00A5E5'}}>Tällä hetkellä</header>
+                <h3 style={{fontSize: '19pt'}}> Kaupunki: {this.state.city} </h3>
+                <div style={{position: 'relative', display: 'inline-block', borderWidth: '2px', borderColor: '#E6E6E6'}}>
+                    <p style={{fontSize: '13pt', borderRadius: "3px", borderStyle: "solid", borderWidth: '2px', borderColor: '#E6E6E6'}}> Lämpötila: {this.state.temperature} astetta</p>
+                    <p style={{fontSize: '13pt', borderRadius: "3px", borderStyle: "solid", borderWidth: '2px', borderColor: '#E6E6E6'}}> Ilmankosteus: {this.state.humidity}</p>
+                    <p style={{fontSize: '13pt', borderRadius: "3px", borderStyle: "solid", borderWidth: '2px', borderColor: '#E6E6E6'}}> Kuvaus: {this.state.condition} </p>
+                    <img src={`http://openweathermap.org/img/wn/${this.state.icon}@2x.png`} alt="Not Found" />
+                    <p style={{fontSize: '13pt', borderRadius: "3px", borderStyle: "solid", borderWidth: '2px', borderColor: '#E6E6E6'}}> Tuuli: {this.state.wind[0]} m/s, suunta {this.state.wind[1]} </p>
+                </div>
             </div>
         );
     }

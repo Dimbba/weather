@@ -7,8 +7,8 @@ import HKI from './HKI';
 class App extends React.Component {
     render() {
         return(
-            <div>
-                <h2>Säätiedot</h2>
+            <div style={{backgroundColor: "#F8F9FA", textAlign: "center"}}>
+                <h2 style={{fontSize: "23pt", backgroundColor: "#FFFFFF"}}>Säätiedot</h2>
                     <TRE />
                     <br />
                     <JKL />
