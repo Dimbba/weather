@@ -9,11 +9,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## How to run
 
+Clone the repository.
+
 First run:
 
 ### `npm install`
 
-In the project directory, you can run:
+In the project directory, run:
 
 ### `npm start`
 
@@ -24,4 +26,14 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 * No dropdown menu.
 * Not a forecast, instead displays current weather in all cities.
-* MaterialUI styling attempted. Basic inline styling implemented instead.
+
+## Things to Improve
+
+* api_key should be passed to other components as props, instead of four separate key placements.
+* Styling with MaterialUI. This was attempted but implemented basic inline styles instead.
+* API call should be done once in a separate component with four different ids for cities.
+* Weather stats are limited and not according to the task given.
+* Loading screen should display while data is being fetched from the API.
+* axios API call should be modernized.
+
+
